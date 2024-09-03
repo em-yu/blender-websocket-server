@@ -33,15 +33,15 @@ python3 websocker_server.py
 - Launch Blender from the command line
 - Open the `Tools` panel on the right side of the viewport, if it is not visible try pressing `N` to toggle this panel group (includes Item, View, Tools panels).
 - Find `Websocket Test` panel
-- Click `Test Call Server`: this should show in the server command line that a message is received
+- Click `Test Call Server`: this should show in the server command line that a message is received:
 ```
 Received websocket message.
 open ws connection
-Error: Malformed input message. Expecting value: line 1 column 1 (char 0)
 ```
-- Click `Move Cube Random`: this should move the default cube by a random vector
+- Click `Move Cube Random`: this should move the default cube by a random vector, each time the button is clicked. If you have no default cube, create one: `Add > Mesh > Cube`. This button is to demonstrate that values can be passed from the Python server to Blender, and be applied on Blender primitives.
 
 ## Notes
 - After making changes to the add-on code, it must be re-installed. A quick way to edit the add-on is to load it as a file in Blender, edit it there and then `Run` it to re-install it.
 - The fact that the client (in Blender) cannot connect to the server except at Blender launch is a bit annoying, I feel like this might be fixable by fixing client code so that there is a way to trigger a websocket connection. The tricky thing is to do so without messing the threads up.
+- Currently I used [websockets](https://websockets.readthedocs.io/en/stable/) for the server and [websocket-client](https://websocket-client.readthedocs.io/en/latest/examples.html#creating-your-first-websocket-connection) for the client (in Blender).
   
