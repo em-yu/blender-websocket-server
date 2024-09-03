@@ -3,6 +3,8 @@
 `blender_addon_websocket.py` is a Blender add-on to demonstrate that Blender can be made to communicate with a [websocket server](https://websockets.readthedocs.io/en/stable/intro/index.html) (`websocker_server.py`).
 This can be useful to make Blender run outside code that might be hard to implement in Blender Python (e.g., because of dependencies), or to simplify porting existing code bases to have a Blender UI.
 
+It is based on this gist: https://gist.github.com/kotobukid/380bf0ac66e128731b95fbccfc583b2b by kotobukid.
+
 ## Setup
 - Install Python dependencies for the server (this is in system Python):
 ```
